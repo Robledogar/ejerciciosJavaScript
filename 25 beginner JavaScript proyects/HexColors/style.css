@@ -1,0 +1,90 @@
+body {
+	font-family: 'Permanent Marker', cursive;
+	
+}
+
+
+
+.container {
+	
+	width: 95%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hex-colors {
+
+	text-align: center;
+}
+
+
+
+.hex-colors h1 {
+	font-size: 2rem;
+	text-transform: uppercase;
+	animation: cambiaColor 10s infinite alternate;
+}
+
+.hex-colors h2 {
+	
+	font-size: 2rem;
+	margin-top: 15%;
+	animation: cambiaColor 20s infinite alternate;
+}
+
+@keyframes cambiaColor {
+	0% {
+		color: indigo;
+	}
+
+	20% {
+		color: blue;
+	}
+
+	40% {
+		color: green;
+	}
+
+	60% {
+		color: yellow;
+	}
+
+	80% {
+		color: orange;
+	}
+
+	100% {
+		color: red;
+	}
+}
+
+@keyframes cambiaColor {
+	0% {
+		color: indigo;
+	}
+
+	20% {
+		color: blue;
+	}
+
+	40% {
+		color: green;
+	}
+
+	60% {
+		color: yellow;
+	}
+
+	80% {
+		color: orange;
+	}
+
+	100% {
+		color: red;
+	}
+}
+
+
+

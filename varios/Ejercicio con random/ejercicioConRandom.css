@@ -1,0 +1,14 @@
+#caja {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#caja div {
+	width: 30%;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: top;
+}

@@ -23,3 +23,12 @@ function stop() {
 function play() {
 	temporizador = setInterval("slider()", 3000);
 }
+
+/* Este pequeño script, serviría para escribir "Hola" cada 2 segundos
+
+function escribir() {
+	document.write("Hola" + "<br>");
+}
+var temporizador = setInterval("escribir()", 1000);
+
+*/

@@ -44,7 +44,6 @@ function ocultar() {
 
 //función del tercer botón
 function resetear() {
-	document.getElementById("variador").value="null";
 	document.getElementById("variador").style.visibility="visible";
 	document.getElementById("contenedorImagen").innerHTML = `<img src="imagen.png" id="imagen">`
 

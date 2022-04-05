@@ -1,0 +1,40 @@
+#contenedor {
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 10px;
+
+}
+
+#contenedorSecundario {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 30px;
+	font-size: 30px;
+}
+
+#boton {
+	width: 60px;
+	height: 38px;
+	background: blue;
+	color: white;
+	border-radius: 5px;
+}
+
+#input {
+	padding: 5px 10px;
+	border-radius: 5px;
+	outline: none;
+	font-size: 1.4em;
+	border: 1px dotted crimson;
+}
+
+a {
+	margin-left: 20px;
+	height: 40px;
+}
+
+
+

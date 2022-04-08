@@ -1,0 +1,57 @@
+body {
+	font-size: 90px;
+}
+
+input {
+	width: 80px;
+	height: 80px;
+	border: 1px solid lightblue;
+	border-radius: 5px;
+	font-size: 60px;
+	margin: 10px;
+	text-align: center;
+}
+
+button {
+	margin-left: 20px;
+	width: 130px;
+	height: 80px;
+	background: lightcyan;
+	border: 1px solid lightblue;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+button:hover {
+	background: lightskyblue;
+}
+
+p {
+	margin: 0px;
+}
+
+
+
+.contenedorPrincipal {
+	
+	padding: 30px;
+	margin: 20px;
+
+}
+
+	#operacion {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	#texto {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 25px;
+		
+
+	}

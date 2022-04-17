@@ -16,7 +16,7 @@ function temporizar() {
 	 var tiempoInicial;
 
 	 window.onload = function() {
-	 	document.getElementById("contenedorBoton").innerHTML = `<button id="boton" onclick="iniciar()">Iniciar</button>`
+	 	document.getElementById("contenedorBoton").innerHTML = `<button id="boton" onclick="iniciar()">Iniciar</button>`;
 	 }
 	 
 	
@@ -24,11 +24,11 @@ function temporizar() {
 	 function iniciar() {
 
 	 	
-	 	document.getElementById("contenedorBoton").innerHTML = `<button id="boton">Iniciar</button>`
 	 	tiempoTotal = document.getElementById("input").value;
 	 	var resto = tiempoTotal % 1;
 
 	 	if (tiempoTotal > 0 && resto == 0) {
+	 		document.getElementById("avisoError").innerHTML = "";
 	 		document.getElementById("contenedorBarra").innerHTML = `<div id="barra" style="height:${porcentajeBarra}%"></div>`
 	 		tiempoInicial = tiempoTotal;
 	 		if (tiempoTotal != 0) {
@@ -37,7 +37,9 @@ function temporizar() {
 	 		actualizarTiempo();
 
 	 	} else {
-	 		document.getElementById("contenedorBoton").insertAdjacentHTML("beforeend", `<h3>El número introducido no es valido.</h3> <h3>Introduzca un entero mayor de 0.</h3>`);
+	 		document.getElementById("avisoError").innerHTML = "";
+	 		document.getElementById("avisoError").insertAdjacentHTML("beforeend", `<h3>El número introducido no es valido.</h3> <h3>Introduzca un entero mayor de 0.</h3>`);
+	 		iniciar();
 	 	}
 	 	
 	 	
@@ -52,12 +54,14 @@ function temporizar() {
 
 	 	if(tiempoTotal == 0) {
 	 		document.getElementById("contenedorBarra").innerHTML = `<div id="barra" style="height:0%"></div>`;
-	 		document.getElementById("contenedorBoton").innerHTML = `<button id="boton" onclick="iniciar()">Iniciar</button>`;
+	 		document.getElementById("contenedorBoton").innerHTML = `<button id="boton" onclick="iniciar()">Iniciar</button>`
+	 		
 	 	} else {
 	 		tiempoTotal -= 1;
 	 		setTimeout("actualizarTiempo()", 1000);
 	 		document.getElementById("contenedorBarra").innerHTML = `<div id="barra" style="height:${porcentajeBarra}%"></div>`;
 	 		porcentajeBarra -=100/tiempoInicial;
+	 		document.getElementById("contenedorBoton").innerHTML = `<button id="boton">Iniciar</button>`
 	 	}
 
 	 }

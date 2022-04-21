@@ -1,0 +1,82 @@
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 40px;
+}
+
+img {
+	width: 100%;
+}
+
+section {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 6px;
+
+
+}
+.boton {
+	width: 150px;
+	background-color: #cddc39;/*#2196f3*/
+	border: 6px solid green;/*none*/
+	border-radius: 12px;/*0*/
+	padding: 6px;
+	cursor: pointer;
+	/*color:  white*/
+}
+
+.boton2 {
+	width: 150px;
+	background-color: #2196f3;
+	border: none;/*none*/
+	border-radius: 0px;/*0*/
+	padding: 6px;
+	cursor: pointer;
+	color: white;
+}
+
+.boton3 {
+	width: 150px;
+	background-color: lightblue;
+	border: 2px solid orange;
+	border-radius: 0px;
+	padding: 6px;
+	cursor: pointer;
+	color: red;
+
+}
+
+.precio {
+	font-size: 1.8em;
+	flex: 1;/*este 1 indica que coge el 100% de lo que haya dejado su hermano*/
+	align-self: flex-start;
+}
+
+.imagen {
+	width: 50%;
+	
+	
+	
+}
+
+.descripcion {
+	text-align: center;
+}
+
+/*.boton {
+	width: 200px;
+	background-color: #9c27b0;
+	font-size: 1em;
+	
+}
+
+.imagen2 {
+	width: 30%;
+}
+
+section {
+	display: flex;
+
+}

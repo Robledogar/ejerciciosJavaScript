@@ -11,9 +11,15 @@ variable.substring(desde, hasta qué caracter) para elegir sólo algunos caracte
 ejemplo: variable.substring(0,1).toUpperCase();
 */
 
+//https://www.html6.es/rey_nombre.png
+
 window.onload = inicio;
+//let reyesGodos = ["ervigio", "ataulfo", "atanagildo", "leovigildo", "recesvinto", "sisebuto", "teodorico"];
 let misReyes = [];
 let valorInput;
+const url = "https://www.html6.es/img";
+
+
 
 function inicio() {
 	document.getElementById("boton").onclick = capturarInput;
@@ -34,16 +40,40 @@ function comprobarNombre() {
 		borrarInput();
 	}	
 
+	
+
 }
 
-function añadirAlArray() {//podría haberse usado forEach
-	misReyes.push(valorInput.toLowerCase());
+function añadirAlArray() {
+	misReyes.push(valorInput);
 	let letraMayuscula = valorInput.substring(0,1).toUpperCase();//para convertirlo podría usarse una función convertidor y devolverlo con return y luego usar ese return dentro de ${convertidor(nombre)}
 	let restoDelNombre = valorInput.substring(1);
-	document.getElementById("contenedorArray").insertAdjacentHTML("beforeend", `<h1>${letraMayuscula}${restoDelNombre}</h1>`);
+	let nombreConMayuscula = letraMayuscula + restoDelNombre;
+	borrarContenedorArray();
+	misReyes.forEach(nombre => {
+		document.getElementById("contenedorArray").insertAdjacentHTML
+		("beforeend", `<div class= "foto">
+			<img src= "${url}/rey_${nombre}.png"
+			onerror = "errores(this)"</div>
+			<div class="nombre">${convertidor(nombre)}</div>`)
+		
+		const ultimo = document.querySelectorAll(".foto").length-1;
+		document.querySelectorAll(".foto")[ultimo].onclick = eliminar;
+	});
 	borrarInput();
 	
 
+}
+
+function eliminar() {
+	const texto = this.querySelector(".nombre").innerText.toLowerCase();// innerText coge el texto
+	const buscar = misReyes.indexOf(texto);
+	misReyes.splice(buscar,1);
+	this.remove();
+}
+
+function errores(e) {
+	e.src = `${url}/rey_.png`;
 }
 
 function borrarInput() {
@@ -58,6 +88,14 @@ function teclado(e) {//puede usarse console.log(tecla) para que la consola nos d
 		capturarInput();
 	}
 
+}
+
+function borrarContenedorArray() {
+	document.getElementById("contenedorArray").innerHTML = "";
+}
+
+function convertidor(n) {
+	return n.substring(0,1).toUpperCase() + n.substring(1).toLowerCase()
 }
 
 
